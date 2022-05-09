@@ -49,7 +49,7 @@ class BlizzSorc(Sorceress):
         y = cast_pos_abs[1] + (random.random() * 2 * spray - spray)
         cast_pos_monitor = convert_abs_to_monitor((x, y))
         mouse.move(*cast_pos_monitor)
-        click_tries = random.randint(4, 8)
+        click_tries = random.randint(2, 4)
         for _ in range(click_tries):
             mouse.press(button="right")
             wait(0.09, 0.12)
@@ -61,6 +61,10 @@ class BlizzSorc(Sorceress):
         for _ in range(int(Config().char["atk_len_pindle"])):
             self._blizzard(cast_pos_abs, spray=11)
             self._ice_blast(cast_pos_abs, spray=11)
+            self._blizzard(cast_pos_abs, spray=11)
+            self._blizzard(cast_pos_abs, spray=11)
+            self._blizzard(cast_pos_abs, spray=11)
+            self._blizzard(cast_pos_abs, spray=11)
         # Move to items
         wait(self._cast_duration, self._cast_duration + 0.2)
         self._pather.traverse_nodes_fixed("pindle_end", self)
