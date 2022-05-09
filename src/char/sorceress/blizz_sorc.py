@@ -45,8 +45,8 @@ class BlizzSorc(Sorceress):
         if not self._skill_hotkeys["blizzard"]:
             raise ValueError("You did not set a hotkey for blizzard!")
         keyboard.send(self._skill_hotkeys["blizzard"])
-        x = cast_pos_abs[0] + (random.random() * 2 * spray - spray)
-        y = cast_pos_abs[1] + (random.random() * 2 * spray - spray)
+        x = cast_pos_abs[0] + (random.random() * 0.5 * spray - spray)
+        y = cast_pos_abs[1] + (random.random() * 3.0 * spray - spray)
         cast_pos_monitor = convert_abs_to_monitor((x, y))
         mouse.move(*cast_pos_monitor)
         click_tries = random.randint(2, 4)
@@ -60,7 +60,7 @@ class BlizzSorc(Sorceress):
         cast_pos_abs = [pindle_pos_abs[0] * 0.9, pindle_pos_abs[1] * 0.9]
         for _ in range(int(Config().char["atk_len_pindle"])):
             self._ice_blast(cast_pos_abs, spray=11)
-            self._blizzard(cast_pos_abs, spray=110)
+            self._blizzard(cast_pos_abs, spray=11)
         # Move to items
         wait(self._cast_duration, self._cast_duration + 0.2)
         self._pather.traverse_nodes_fixed("pindle_end", self)
