@@ -44,7 +44,7 @@ def is_right_skill_active() -> bool:
     """
     :return: Bool if skill is red/available or not. Skill must be selected on right skill slot when calling the function.
     """
-    return true
+    return True
 
 def is_right_skill_selected(template_list: list[str]) -> bool:
     """
