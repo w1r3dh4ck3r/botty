@@ -49,7 +49,7 @@ class BlizzSorc(Sorceress):
         y = cast_pos_abs[1] + (random.random() * 2 * spray - spray)
         cast_pos_monitor = convert_abs_to_monitor((x, y))
         mouse.move(*cast_pos_monitor)
-        click_tries = random.randint(2, 4)
+        click_tries = random.randint(4, 8)
         for _ in range(click_tries):
             mouse.press(button="right")
             wait(0.09, 0.12)
