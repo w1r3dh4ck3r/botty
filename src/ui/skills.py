@@ -44,15 +44,7 @@ def is_right_skill_active() -> bool:
     """
     :return: Bool if skill is red/available or not. Skill must be selected on right skill slot when calling the function.
     """
-    roi = [
-        Config().ui_pos["skill_right_x"] - (Config().ui_pos["skill_width"] // 2),
-        Config().ui_pos["skill_y"] - (Config().ui_pos["skill_height"] // 2),
-        Config().ui_pos["skill_width"],
-        Config().ui_pos["skill_height"]
-    ]
-    img = cut_roi(grab(), roi)
-    avg = np.average(img)
-    return avg > 75.0
+    return true
 
 def is_right_skill_selected(template_list: list[str]) -> bool:
     """
