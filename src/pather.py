@@ -378,7 +378,7 @@ class Pather:
             (Location.A5_LARZUK, Location.A5_STASH): [14, 13, 5],
             (Location.A5_LARZUK, Location.A5_MALAH): [14, 13, 5, 4, 3, 1, 2],
             # Pindle
-            (Location.A5_PINDLE_START, Location.A5_PINDLE_SAFE_DIST): [100, 101, 102, 103],
+            (Location.A5_PINDLE_START, Location.A5_PINDLE_SAFE_DIST): [50, 101, 102, 103],
             (Location.A5_PINDLE_SAFE_DIST, Location.A5_PINDLE_END): [104],
             # Eldritch
             (Location.A5_ELDRITCH_START, Location.A5_ELDRITCH_SAFE_DIST): [120, 121, 122],
