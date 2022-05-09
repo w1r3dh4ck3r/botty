@@ -59,12 +59,8 @@ class BlizzSorc(Sorceress):
         pindle_pos_abs = convert_screen_to_abs(Config().path["pindle_end"][0])
         cast_pos_abs = [pindle_pos_abs[0] * 0.9, pindle_pos_abs[1] * 0.9]
         for _ in range(int(Config().char["atk_len_pindle"])):
-            self._blizzard(cast_pos_abs, spray=11)
             self._ice_blast(cast_pos_abs, spray=11)
-            self._blizzard(cast_pos_abs, spray=20)
-            self._blizzard(cast_pos_abs, spray=30)
-            self._blizzard(cast_pos_abs, spray=40)
-            self._blizzard(cast_pos_abs, spray=50)
+            self._blizzard(cast_pos_abs, spray=110)
         # Move to items
         wait(self._cast_duration, self._cast_duration + 0.2)
         self._pather.traverse_nodes_fixed("pindle_end", self)
