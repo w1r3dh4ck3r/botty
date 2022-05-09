@@ -35,7 +35,7 @@ class Basic_Ranged(IChar):
         if not self._skill_hotkeys["right_attack"]:
             raise ValueError("You did not set right attack hotkey!")
         keyboard.send(self._skill_hotkeys["right_attack"])
-        for _ in range(3):
+        for _ in range(6):
             x = cast_pos_abs[0] + (random.random() * 2 * spray - spray)
             y = cast_pos_abs[1] + (random.random() * 2 * spray - spray)
             cast_pos_monitor = convert_abs_to_monitor((x, y))
